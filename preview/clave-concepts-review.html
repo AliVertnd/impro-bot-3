@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clave — два концепта</title>
+<style>
+  :root { color-scheme: dark; --bg:#14110e; --paper:#ece4d6; --muted:#b7aa98; --line:#3a3228; --a:#c6a15a; --b:#c4844a; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--paper); font:16px/1.5 Georgia, "Times New Roman", serif; }
+  header, main { width:min(1180px, calc(100% - 40px)); margin:0 auto; }
+  header { padding:36px 0 8px; }
+  h1 { font-weight:500; font-size:clamp(32px, 4vw, 52px); letter-spacing:.02em; margin:0 0 10px; }
+  .lead { max-width:720px; color:var(--muted); margin:0 0 28px; }
+  nav { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:28px; }
+  nav a { color:var(--paper); text-decoration:none; border:1px solid var(--line); padding:8px 12px; font:12px/1.2 Arial, sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+  section { padding:28px 0 48px; border-top:1px solid var(--line); }
+  .kicker { font:12px/1.3 Arial, sans-serif; letter-spacing:.16em; text-transform:uppercase; margin-bottom:8px; }
+  #a .kicker { color:var(--a); }
+  #b .kicker { color:var(--b); }
+  #mix .kicker { color:#e4d2b0; }
+  h2 { font-weight:500; font-size:clamp(26px, 3vw, 36px); margin:0 0 8px; }
+  p { margin:0 0 14px; }
+  .note { color:var(--muted); max-width:760px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; }
+  figure { margin:0; background:#0c0b09; }
+  img, video { width:100%; display:block; height:auto; }
+  figcaption { padding:10px 12px 12px; color:var(--muted); font:13px/1.4 Arial, sans-serif; }
+  .wide { grid-column:1 / -1; }
+  .files { margin-top:16px; color:var(--muted); font:13px/1.6 Arial, sans-serif; }
+  code { color:var(--paper); }
+  @media (max-width:800px) { .grid { grid-template-columns:1fr; } header, main { width:min(1180px, calc(100% - 24px)); } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Два концепта Clave</h1>
+  <p class="lead">Оба сохранены. Выбирать лучше направление, а не текущую чистоту 3D: картинки ниже — это мудборд, кадры Blender — черновая сборка. Прототип страниц сайта сейчас надет на второй концепт.</p>
+  <nav>
+    <a href="#mix">Смесь</a>
+    <a href="#a">A · Чёрный архив</a>
+    <a href="#b">B · Картонный лофт</a>
+    <a href="clave-concept-pages.html">Прототип страниц</a>
+  </nav>
+</header>
+<main>
+  <section id="mix">
+    <div class="kicker">Смесь · пробный кадр</div>
+    <h2>Чёрный футляр, внутри авторский фильм</h2>
+    <p class="note">Корпус и ключ — из премиального концепта. Кадр в крышке и бумажные карточки — из архива. Это направление, не финальная модель: рамка ещё чуть отстаёт от крышки, отпечатки на карточках временные.</p>
+    <div class="grid">
+      <figure class="wide">
+        <img src="clave-mixed-case-preview.png" alt="Смешанный кадр: чёрный футляр с нефтяным фильмом">
+        <figcaption>Blender, без анимации. Файл сцены: clave-mixed-case.blend</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="a">
+    <div class="kicker">Концепт A · первый</div>
+    <h2>Чёрный архив и ключ</h2>
+    <p class="note">Премиальный футляр: чёрное дерево, латунь, ключ как знак студии. Нефтяное поле здесь один из фильмов внутри архива, а не стиль всего сайта. Рядом могут стоять духи, автомобиль, архитектура — разные миры в одной чёрной раме. Анимации камеры нет, только неподвижный кадр из Blender.</p>
+    <div class="grid">
+      <figure>
+        <img src="clave-archive-hero-reference.png" alt="Чёрный деревянный футляр с картиной нефтяного заката">
+        <figcaption>Мудборд. Герой: футляр на тёмном столе, внутри закат с вышками.</figcaption>
+      </figure>
+      <figure>
+        <img src="clave-case-module-reference.png" alt="Чёрная коробка с тремя карточками и пейзажем в крышке">
+        <figcaption>Мудборд. Повторяемый модуль кейса: экран в крышке и три вкладыша.</figcaption>
+      </figure>
+      <figure>
+        <img src="clave-archive-scene-preview.png" alt="Черновой рендер чёрно-латунного футляра в Blender">
+        <figcaption>Blender, статичный кадр. Чёрный футляр, латунный кант, ключ на столе. Это не мудборд, а собранная сцена.</figcaption>
+      </figure>
+      <figure>
+        <img src="clave-key-object-reference.png" alt="Латунный ключ с замочной скважиной в головке">
+        <figcaption>Мудборд. Знак бренда: ключ. В сцену пока попала упрощённая версия.</figcaption>
+      </figure>
+      <figure>
+        <img src="clave-case-gallery-reference.png" alt="Три чёрные рамы с разными кинематографическими мирами">
+        <figcaption>Мудборд. Галерея работ: разные миры, одна чёрно-золотая рама.</figcaption>
+      </figure>
+      <figure>
+        <img src="clave-archive-gallery-reference.png" alt="Тёмный архив с золотой аркой и ключом на постаменте">
+        <figcaption>Мудборд. Архив как пространство, не как предмет на столе.</figcaption>
+      </figure>
+    </div>
+    <p class="files">Файлы: <code>clave-archive-scene.blend</code>, <code>clave-archive-assets.glb</code>, <code>clave-archive-scene-preview.png</code></p>
+  </section>
+
+  <section id="b">
+    <div class="kicker">Концепт B · второй</div>
+    <h2>Картонный лофт, Black Gold</h2>
+    <p class="note">Ваш референс: открытая картонная коробка на столе, сепия, нефтяной Запад 1880-х, фонарь, инструмент, грубый лофт. Стиль один на весь сайт, мужской и предметный. В Blender уже есть пролёт камеры на 6 секунд, но сцена светлее и проще референса: картон читается как светлое дерево, лофта вокруг нет, реквизит из простых фигур.</p>
+    <div class="grid">
+      <figure class="wide">
+        <img src="clave-user-black-gold-reference.jpg" alt="Исходный референс Black Gold Gallery">
+        <figcaption>Ваш исходный референс. К этому кадру концепт B и должен прийти.</figcaption>
+      </figure>
+      <figure>
+        <img src="clave-western-archive-preview.png" alt="Черновой рендер картонной коробки в Blender">
+        <figcaption>Blender, финальный кадр пролёта. Коробка, карточки и надпись на месте, свет и фактура ещё не дотянуты до референса.</figcaption>
+      </figure>
+      <figure>
+        <video controls playsinline poster="clave-western-archive-preview.png">
+          <source src="clave-western-archive-camera-flythrough.mp4" type="video/mp4">
+        </video>
+        <figcaption>Blender, пролёт 6 секунд: от общего стола к открытой коробке.</figcaption>
+      </figure>
+    </div>
+    <p class="files">Файлы: <code>clave-western-archive.blend</code>, <code>clave-western-archive.glb</code>, <code>clave-western-archive-camera-flythrough.mp4</code></p>
+  </section>
+</main>
+</body>
+</html>

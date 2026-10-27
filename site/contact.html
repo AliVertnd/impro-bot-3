@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clave — Контакт</title>
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html" aria-label="Clave">
+    <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="7" cy="11" r="4.2" fill="none" stroke="#c6a56a" stroke-width="1.2"/><path d="M11 11h8M16.5 11v3.2M19 11v2" fill="none" stroke="#c6a56a" stroke-width="1.2"/></svg>
+    CLAVE
+  </a>
+  <nav class="nav">
+    <a href="work.html" data-ru="Работы" data-en="Work">Работы</a>
+    <a href="services.html" data-ru="Услуги" data-en="Services">Услуги</a>
+    <a href="studio.html" data-ru="Студия" data-en="Studio">Студия</a>
+  </nav>
+  <div class="right">
+    <button class="lang" id="lang" type="button">RU / EN</button>
+    <a class="solid" href="contact.html" data-ru="Обсудить проект" data-en="Start a project">Обсудить проект</a>
+  </div>
+</header>
+<main class="page">
+  <div class="contact">
+    <div>
+      <div class="kicker" data-ru="Контакт" data-en="Contact">Контакт</div>
+      <h1 class="page-title" data-ru="Расскажите о фильме." data-en="Tell us about the film.">Расскажите о фильме.</h1>
+      <p class="lede" data-ru="Достаточно четырёх вещей: что это за фильм, где его будут смотреть, какой длины он нужен и к какому сроку." data-en="Four things are enough: what the film is, where it will be seen, how long it should be, and when it is needed.">Достаточно четырёх вещей: что это за фильм, где его будут смотреть, какой длины он нужен и к какому сроку.</p>
+      <p class="fine" data-ru="Отвечаем с решением, берёмся ли за задачу и в каком объёме. Смету называем после этого, не на сайте." data-en="We answer with a decision: whether we take the task, and in what scope. The estimate comes after that, not on the site.">Отвечаем с решением, берёмся ли за задачу и в каком объёме. Смету называем после этого, не на сайте.</p>
+    </div>
+    <div>
+      <form id="brief">
+        <label><span data-ru="Имя" data-en="Name">Имя</span><input name="name" data-ru-placeholder="Как к вам обращаться" data-en-placeholder="What should we call you" placeholder="Как к вам обращаться"></label>
+        <label><span data-ru="Компания" data-en="Company">Компания</span><input name="company" data-ru-placeholder="Бренд или агентство" data-en-placeholder="Brand or agency" placeholder="Бренд или агентство"></label>
+        <label><span data-ru="Задача" data-en="The task">Задача</span><textarea name="task" data-ru-placeholder="Что за фильм, где выйдет, длина, срок" data-en-placeholder="What the film is, where it will run, length, deadline" placeholder="Что за фильм, где выйдет, длина, срок"></textarea></label>
+        <label><span data-ru="Почта или Telegram" data-en="Email or Telegram">Почта или Telegram</span><input name="contact" data-ru-placeholder="Куда ответить" data-en-placeholder="Where to reply" placeholder="Куда ответить"></label>
+        <p class="form-error" id="form-error" hidden data-ru="Нужны имя, задача и способ связи." data-en="Name, the task, and a way to reply are required.">Нужны имя, задача и способ связи.</p>
+        <div class="form-actions">
+          <button class="solid" type="submit" data-ru="Отправить" data-en="Send">Отправить</button>
+          <a class="outline" id="telegram" href="#" data-ru="Написать в Telegram" data-en="Write on Telegram">Написать в Telegram</a>
+        </div>
+        <p class="pending" id="telegram-note" hidden data-ru="Ссылка на Telegram встанет сюда." data-en="The Telegram link will go here.">Ссылка на Telegram встанет сюда.</p>
+      </form>
+      <p class="sent" id="sent" hidden data-ru="Получили. Вернёмся с ответом." data-en="Received. We’ll come back with an answer.">Получили. Вернёмся с ответом.</p>
+    </div>
+  </div>
+</main>
+<footer class="foot"><span>Clave · <span data-ru="нейропродакшен" data-en="AI film production">нейропродакшен</span></span></footer>
+<script src="js/site.js"></script>
+</body>
+</html>
