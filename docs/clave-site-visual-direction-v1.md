@@ -2,7 +2,7 @@
 
 Revised after the latest direction. This is a working design brief, not final copy.
 
-**Superseded:** this document describes a near-black/gold archive and treats the oilfield as one case. It is kept for history only. The active direction is [Cardboard Archive v2](clave-site-visual-direction-v2.md), based on the user's cardboard box / Wild West loft reference.
+**Historical draft.** The owner selected the first Black Gold Gallery assembly as the active direction. Use `clave-site-visual-direction-v3.md`; v2's cardboard archive was explicitly rejected.
 
 ## Business and audience
 

@@ -69,6 +69,14 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var narrow = window.matchMedia("(max-width: 860px)").matches;
   var journey = document.getElementById("journey");
+  var plate = document.getElementById("journey-frame");
+  var frameCount = 52;
+  if (plate && !reduceMotion && !narrow) {
+    for (var i = 1; i <= frameCount; i++) {
+      var preload = new Image();
+      preload.src = "media/journey-v2/frame-" + String(i).padStart(2, "0") + ".jpg";
+    }
+  }
   function placeJourney() {
     if (!journey) return;
     var forced = new URLSearchParams(location.search).get("frame");
@@ -80,11 +88,51 @@
     }
     if (forced !== null && forced !== "") progress = Math.min(Math.max(Number(forced), 0), 1);
     journey.style.setProperty("--p", progress.toFixed(4));
-    var swing = Math.sin(progress * Math.PI);
-    journey.style.setProperty("--yaw", (swing * 4).toFixed(2) + "deg");
-    journey.style.setProperty("--overlap", (swing * 12).toFixed(2) + "%");
-    journey.classList.toggle("is-left", progress > 0.4);
-    journey.classList.toggle("is-open", progress > 0.92);
+    if (plate && !narrow) {
+      var index = Math.round(progress * (frameCount - 1)) + 1;
+      if (plate.dataset.frame !== String(index)) {
+        plate.dataset.frame = String(index);
+        plate.src = "media/journey-v2/frame-" + String(index).padStart(2, "0") + ".jpg";
+      }
+    }
+    journey.classList.toggle("is-left", progress > 0.2);
+    journey.classList.toggle("is-open", progress > 0.4 && progress < 0.56);
+  }
+  var works = [
+    { href: "veil.html", img: "media/art-left.jpg", ru: "Veil", en: "Veil" },
+    { href: "night-road.html", img: "media/art-mid.jpg", ru: "Night Road", en: "Night Road" },
+    { href: "above-the-clouds.html", img: "media/art-right.jpg", ru: "Above the Clouds", en: "Above the Clouds" },
+    { href: "black-gold.html", img: "media/black-gold.jpg", ru: "Black Gold", en: "Black Gold" }
+  ];
+  var hall = document.getElementById("gallery");
+  var hits = document.querySelectorAll(".fit .hall-hit");
+  var hallStart = 0;
+  function paintHall() {
+    if (!hall) return;
+    for (var i = 0; i < hits.length; i++) {
+      var work = works[(hallStart + i) % works.length];
+      var hit = hits[i];
+      hit.href = work.href;
+      var img = document.querySelectorAll(".fit .plate")[i];
+      if (img) img.src = work.img;
+      var label = hit.querySelector("span");
+      label.dataset.ru = work.ru;
+      label.dataset.en = work.en;
+      label.textContent = en ? work.en : work.ru;
+    }
+    journey.classList.toggle("is-paged", hallStart !== 0);
+  }
+  var nextHall = document.querySelector("[data-hall-next]");
+  if (nextHall) {
+    nextHall.addEventListener("click", function () {
+      hallStart = (hallStart + 1) % works.length;
+      paintHall();
+    });
+  }
+  var forcedHall = new URLSearchParams(location.search).get("hall");
+  if (forcedHall) {
+    hallStart = Math.min(Math.max(Number(forcedHall) || 0, 0), works.length - 1);
+    paintHall();
   }
   if (journey && !reduceMotion && !narrow) {
     window.addEventListener("scroll", placeJourney, { passive: true });

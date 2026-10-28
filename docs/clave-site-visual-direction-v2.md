@@ -1,6 +1,6 @@
-# Clave — visual direction v2: Cardboard Archive
+# Clave — visual direction v2: Cardboard Archive (archived)
 
-**Replaces `clave-site-visual-direction-v1.md`.** Use together with the updated `КОНЦЕПТ.md` and the ordered work list in `docs/ПЛАН-РАБОТ-САЙТ.md`.
+**Archived after the owner's selection of the original Black Gold Gallery build. Do not use for the active site.** The active direction is now `clave-site-visual-direction-v3.md`.
 
 ## Brand idea
 
